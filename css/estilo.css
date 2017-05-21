@@ -1,0 +1,137 @@
+.propElPort {
+  width: 20%;
+  height: 35em;
+  background-position: center;
+  transition: 0.5s ease;
+  opacity: 0.2;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+}
+.hoverPort {
+  transition: 0.5s ease;
+  width: 23%;
+  opacity: 1;
+}
+body {
+  margin: 0;
+  background-color: black;
+  font-family: 'Questrial', sans-serif;
+}
+.header {
+  color: #c26d3b;
+  display: flex;
+  justify-content: space-between;
+  height: 4em;
+}
+.liHead {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 1.2em;
+}
+.elLi {
+  padding: 0.1em 0.6em 0.1em 0.3em;
+  transition: 0.5s;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-bottom-width: 3px;
+  border-right-color: black;
+  border-bottom-color: black;
+  border-top-color: black;
+  border-left-color: black;
+  border-radius: 8px 8px 16px 8px;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-top-style: solid;
+  border-left-style: solid;
+  cursor: pointer;
+}
+.elLi:hover {
+  color: white;
+  border-right-color: #c26d3b;
+  border-bottom-color: #c26d3b;
+  border-top-color: white;
+  border-left-color: white;
+  transition: 0.5s;
+}
+.figure {
+  margin: 0;
+  padding: 0.5em;
+}
+.navHeader {
+  width: 70%;
+  margin-right: 2em;
+}
+.portBack {
+  display: flex;
+  margin: 0;
+  width: 100%;
+}
+.qsomos {
+  background-image: url(../img/quienessomos.jpg);
+}
+.carta {
+  background-image: url(../img/carta.jpg);
+  background-size: cover;
+}
+.reservas {
+  background-image: url(../img/reserved.jpg);
+}
+.bebida {
+  background-image: url(../img/vino.jpg);
+}
+.contacto {
+  background-image: url(../img/contact3.jpg);
+}
+.qsomos,
+.carta,
+.reservas,
+.bebida,
+.contacto {
+  width: 20%;
+  height: 35em;
+  background-position: center;
+  transition: 0.5s ease;
+  opacity: 0.2;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+}
+.reservas:hover,
+.bebida:hover,
+.qsomos:hover,
+.contacto:hover,
+.carta:hover,
+.reservas:hover {
+  transition: 0.5s ease;
+  width: 23%;
+  opacity: 1;
+}
+.portBack h3 {
+  margin-left: 10%;
+  margin-top: 70%;
+  font-size: 1.5em;
+  color: white;
+  background-color: #c26d3b;
+  border-radius: 18px 0 0 18px;
+  padding-left: 0.5em;
+}
+.vincQS:before {
+  content: 'IR';
+  font-size: 1em;
+  transition: 1s ease;
+}
+.vincQS:hover:before {
+  content: 'ir > >';
+  transition: 1s ease;
+  padding-left: 5%;
+}
+.vincQS {
+  border: 1px solid #c26d3b;
+  border-radius: 18px ;
+  padding: 1em;
+  color: #c26d3b;
+  background-color: white;
+  position: relative;
+  margin-left: 2em;
+}
