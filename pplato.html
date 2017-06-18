@@ -5,14 +5,16 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<link href="https://fonts.googleapis.com/css?family=Questrial|Roboto" rel="stylesheet">
- 
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
 </head>
 <body>
 <header class="header">
+<span class="icon-menu" id="btn"></span>
+      <span class="icon-cancel-circle" id="cancel"></span>
 <figure class="figure">
 <a href="index.html"><img class="logo" src="img/Mammaroma-testata-e1448755939776.png" width="150px" height="auto"></img></a></figure>
-<nav class="navHeader">
+<nav class="navHeader menu" id="menu">
 <ul class="liHead">
 	<li class="elLi"><a class="link" href="index.html">Inicio</a></li>
 	<li class="elLi "><a class="link" href="quienes.html">Quienes Somos</a></li>
@@ -27,7 +29,7 @@
 <h1 class="titC">PRIMEROS </BR>PLATOS</h1>
 <ul class="ulMenu">
 <li class="entrantes "><a a href="carta.html" class="linkC " href="carta.html">entrantes</a></li>
-<li class="primeros"><a a href="pplato.html" class="linkC res">primeros platos</a></li>
+<li class="primeros"><a a href="pplato.html" class="linkC res">primeros</a></li>
 <li class="carnes"><a href="carnes.html" class="linkC">carnes</a></li>
 <li class="pescado"><a href="pescado.html" class="linkC">pescado</a></li>
 <li class="postre"><a a href="postre.html"class="linkC">postre</a></li>
@@ -51,7 +53,20 @@
 </div>
 </div>
 </section>
+<script type="text/javascript">
+	var boton= document.getElementById ('btn');
+      var menu = document.getElementById ('menu');
+      var btnCancel= document.getElementById ('cancel');
+   
+      boton.addEventListener ('click', cambios);
+      btnCancel.addEventListener ('click', cambios);
+     
+      function cambios (){
 
+        menu.classList.toggle ('activate');
+        btnCancel.classList.toggle ('activate');
+    }
+</script>
 
 </body>
 </html>

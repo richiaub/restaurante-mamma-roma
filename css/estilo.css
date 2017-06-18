@@ -12,13 +12,56 @@
   width: 30%;
   opacity: 1;
 }
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?b8x1hr');
+  src: url('../fonts/icomoon.eot?b8x1hr#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?b8x1hr') format('truetype'), url('../fonts/icomoon.woff?b8x1hr') format('woff'), url('../fonts/icomoon.svg?b8x1hr#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-cancel-circle:before {
+  content: "\ea0d";
+}
+.icon-menu {
+  background-color: #c26d3b;
+  border-radius: 50%;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  padding: 10px;
+  display: none;
+  z-index: 3;
+  cursor: pointer;
+  color: white;
+}
+.icon-cancel-circle {
+  display: none;
+  color: white;
+}
 body {
   margin: 0;
-  background-color: black;
+  background-color: white;
   font-family: 'Questrial', sans-serif;
 }
 .header {
-  color: #c26d3b;
+  color: black;
   display: flex;
   justify-content: space-between;
   height: 4em;
@@ -30,6 +73,7 @@ body {
   font-size: 1.2em;
 }
 .elLi {
+  margin-left: 1em;
   padding: 0.1em 0.6em 0.1em 0.3em;
   transition: 0.5s;
   border-right-width: 1px;
@@ -38,8 +82,8 @@ body {
   border-bottom-width: 3px;
   border-right-color: black;
   border-bottom-color: black;
-  border-top-color: black;
-  border-left-color: black;
+  border-top-color: white;
+  border-left-color: white;
   border-radius: 8px 8px 16px 8px;
   border-right-style: solid;
   border-bottom-style: solid;
@@ -59,7 +103,6 @@ body {
   padding: 0.5em;
 }
 .navHeader {
-  width: 50%;
   margin-right: 2em;
 }
 .portBack {
@@ -137,7 +180,7 @@ body {
 }
 .link {
   text-decoration: none;
-  color: #c26d3b;
+  color: black;
 }
 .centro {
   background-color: black;
@@ -145,12 +188,14 @@ body {
   width: 90%;
 }
 .cuerpoQs {
-  margin: 0.5em 4% auto 4%;
+  margin: auto;
   border-radius: 8px;
-  background-color: white;
+  background-color: #f3e4db;
+  border: 1px solid black;
   width: 85%;
   color: #c26d3b;
   font-size: 1.5em;
+  padding: 0.5em;
 }
 .img1qs {
   width: 18em;
@@ -161,12 +206,14 @@ body {
 }
 .secCarta {
   display: flex;
-  margin: 0.5em 4% auto 4%;
+  margin: auto;
   border-radius: 8px;
-  background-color: white;
+  background-color: #f3e4db;
+  border: 1px solid black;
   width: 85%;
   color: #c26d3b;
   font-size: 1.5em;
+  padding: 0.5em;
   justify-content: space-between;
 }
 .seccionM {
@@ -189,7 +236,6 @@ body {
   height: 2em;
 }
 .linkC {
-  padding: 0.2em;
   color: #c26d3b;
   text-decoration: none;
 }
@@ -208,20 +254,25 @@ body {
   font-size: 0.8em;
 }
 .formuRes {
-  margin: 0.5em 4% auto 4%;
+  margin: auto;
   border-radius: 8px;
-  background-color: white;
+  background-color: #f3e4db;
+  border: 1px solid black;
   width: 85%;
   color: #c26d3b;
   font-size: 1.5em;
+  padding: 0.5em;
+  border: none;
 }
 .cyr {
-  margin: 0.5em 4% auto 4%;
+  margin: auto;
   border-radius: 8px;
-  background-color: white;
+  background-color: #f3e4db;
+  border: 1px solid black;
   width: 85%;
   color: #c26d3b;
   font-size: 1.5em;
+  padding: 0.5em;
   display: flex;
   font-size: 1em;
 }
@@ -260,7 +311,7 @@ input[type="submit"] {
   text-align: center;
 }
 .spanb {
-  color: #ffffff;
+  color: #f3e4db;
 }
 .costadoImgB {
   width: 25%;
@@ -273,4 +324,116 @@ input[type="submit"] {
 }
 .textoQs {
   padding: 1em;
+}
+@media screen and (max-width: 865px) {
+  .liHead {
+    font-size: 1em;
+  }
+  .elLi {
+    padding-bottom: 0.3em;
+  }
+}
+@media screen and (max-width: 625px) {
+  .menu {
+    position: fixed;
+    right: 0;
+    bottom: ;
+    top: 0;
+    left: -100%;
+    background-color: rgba(194, 109, 59, 0.95);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -webkit-transition: all 600ms cubic-bezier(0.45, 0.32, 0.99, 0.59);
+    -moz-transition: all 600ms cubic-bezier(0.45, 0.32, 0.99, 0.59);
+    -o-transition: all 600ms cubic-bezier(0.45, 0.32, 0.99, 0.59);
+    transition: all 600ms cubic-bezier(0.45, 0.32, 0.99, 0.59);
+    /* custom */
+    -webkit-transition-timing-function: cubic-bezier(0.45, 0.32, 0.99, 0.59);
+    -moz-transition-timing-function: cubic-bezier(0.45, 0.32, 0.99, 0.59);
+    -o-transition-timing-function: cubic-bezier(0.45, 0.32, 0.99, 0.59);
+    transition-timing-function: cubic-bezier(0.45, 0.32, 0.99, 0.59);
+    /* custom */
+  }
+  .menu.activate {
+    left: 0;
+    opacity: 1;
+    -webkit-transition: all 600ms cubic-bezier(0.45, 0.32, 0.99, 0.59);
+    -moz-transition: all 600ms cubic-bezier(0.45, 0.32, 0.99, 0.59);
+    -o-transition: all 600ms cubic-bezier(0.45, 0.32, 0.99, 0.59);
+    transition: all 600ms cubic-bezier(0.45, 0.32, 0.99, 0.59);
+    /* custom */
+    -webkit-transition-timing-function: cubic-bezier(0.45, 0.32, 0.99, 0.59);
+    -moz-transition-timing-function: cubic-bezier(0.45, 0.32, 0.99, 0.59);
+    -o-transition-timing-function: cubic-bezier(0.45, 0.32, 0.99, 0.59);
+    transition-timing-function: cubic-bezier(0.45, 0.32, 0.99, 0.59);
+    /* custom */
+    text-align: center;
+  }
+  .menu ul {
+    flex: 1;
+  }
+  .icon-menu {
+    display: initial;
+  }
+  .menu li:first-child {
+    border-top: 1px solid white;
+  }
+  .menu li:before {
+    display: none;
+  }
+  .liHead {
+    flex-direction: column;
+    display: flex;
+    font-size: 1.5em;
+    width: 80%;
+    align-items: center;
+    margin: 0.5em;
+    border: none;
+  }
+  .figure {
+    z-index: 4;
+  }
+  .link {
+    color: white;
+  }
+  .elLi {
+    margin: 0.5em;
+    border: 1px solid white;
+  }
+  .portBack {
+    flex-direction: column;
+  }
+  .qsomos,
+  .carta,
+  .reservas,
+  .bebida,
+  .contacto {
+    width: 100%;
+    background-size: cover;
+  }
+  .reservas:hover,
+  .bebida:hover,
+  .qsomos:hover,
+  .contacto:hover,
+  .carta:hover,
+  .reservas:hover {
+    width: 100%;
+  }
+  .vincQS {
+    display: none;
+  }
+  .portBack h3 {
+    padding: 0.3em;
+    font-size: 2.5em;
+  }
+  .costadoImgB {
+    display: none;
+  }
+  .cyr {
+    flex-direction: column;
+  }
 }

@@ -2,6 +2,7 @@
 @gris:#545454;
 @pSizeW: 25%;
 @pSizeH: 35em;
+@fondo: #F3E4DB;
 
 .propElPort {
 	width: @pSizeW;
@@ -18,16 +19,64 @@
 	opacity: 1
 
 }
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?b8x1hr');
+  src:  url('../fonts/icomoon.eot?b8x1hr#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?b8x1hr') format('truetype'),
+    url('../fonts/icomoon.woff?b8x1hr') format('woff'),
+    url('../fonts/icomoon.svg?b8x1hr#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-cancel-circle:before {
+  content: "\ea0d";
+}
+
+.icon-menu{
+  background-color: @naranja;
+  border-radius:50%;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  padding: 10px;
+  display: none;
+  z-index: 3;
+  cursor: pointer;
+   color: white;
+}
+.icon-cancel-circle{
+  display: none;
+  color: white;
+}
 
 body{
 	margin:0;
-	background-color:black;
+	background-color: white;
 	font-family: 'Questrial', sans-serif;
 	
 }
 .header{
-	color:@naranja;
+	color:black;
 	display: flex;
 	justify-content: space-between;
 	height: 4em;
@@ -42,6 +91,7 @@ body{
 
 }
 .elLi{
+	margin-left: 1em;
 	padding: 0.1em 0.6em 0.1em 0.3em;
 	transition: 0.5s;
 	 border-right-width:1px;
@@ -50,8 +100,8 @@ body{
   border-bottom-width:3px;
    border-right-color:black;
    border-bottom-color:black;
-   border-top-color:black;
-   border-left-color:black;
+   border-top-color:white;
+   border-left-color:white;
   border-radius:8px 8px 16px 8px;
   border-right-style: solid;
   border-bottom-style: solid;
@@ -60,6 +110,7 @@ body{
 
  cursor: pointer;
 }
+
 .elLi:hover{
 	
  border-right-color:@naranja;
@@ -76,7 +127,7 @@ body{
 	padding: 0.5em
 }
 .navHeader{
-	width: 50%;
+	
 	margin-right: 2em;
 
 }
@@ -145,10 +196,12 @@ color: white;
 }
 .link{
 	text-decoration: none;
-	color: @naranja
+	color:black;
+	
 }
 .centro{
 	background-color: black;
 	margin-left:5%;
 	width: 90%
 }
+
