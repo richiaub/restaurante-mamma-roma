@@ -226,6 +226,7 @@ body {
   padding: 0.4em;
   list-style: none;
   cursor: pointer;
+  border-radius: 0 8px 0 0;
 }
 .ulMenu li {
   margin: 0.2em;
@@ -238,17 +239,17 @@ body {
 .linkC {
   color: #c26d3b;
   text-decoration: none;
+  border-radius: 0 8px 0 0;
+  padding: 0.2em;
 }
 .res {
   background-color: #545454;
   color: white ;
-  padding: 0.2em;
 }
 .linkC:hover {
   transition: 1s;
   background-color: #545454;
   color: white ;
-  padding: 0.2em;
 }
 .plato {
   font-size: 0.8em;
@@ -435,5 +436,8 @@ input[type="submit"] {
   }
   .cyr {
     flex-direction: column;
+  }
+  .secCarta {
+    display: block;
   }
 }
